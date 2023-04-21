@@ -1,6 +1,5 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import CarContainer from '../components/cart/CarContainer'
+import Navbar from '../components/Navbar';
+import CarContainer from '../components/cart/CarContainer';
 
 const Home = () => {
     return (
@@ -11,4 +10,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
