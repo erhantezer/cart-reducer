@@ -1,13 +1,15 @@
+import CartItem from "./CartItem"
 
 
 const CarContainer = () => {
+    
     return (
         <section className="cart">
             <header>
                 <h2>your bag</h2>
             </header>
             <div>
-
+                <CartItem/>
             </div>
             <footer>
                 <hr />
