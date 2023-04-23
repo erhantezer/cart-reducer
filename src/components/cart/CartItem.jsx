@@ -1,7 +1,7 @@
 
 
 const CartItem = () => {
-    
+
     return (
         <article className="cart-item">
             <img src="" alt="" />
