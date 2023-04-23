@@ -1,6 +1,8 @@
 
 
 const Navbar = () => {
+
+    
     return (
         <nav>
             <div className='nav-center'>
@@ -18,4 +20,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
