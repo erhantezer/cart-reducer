@@ -1,7 +1,15 @@
+import { useGlobalContext } from "../../context"
 import CartItem from "./CartItem"
 
 
 const CarContainer = () => {
+    const {cart, total, clearCart} = useGlobalContext()
+
+    if (cart.length === 0) {
+        return (
+            
+            )
+    }
 
     return (
         <section className="cart">
