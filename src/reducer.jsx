@@ -14,5 +14,9 @@ export default (state, action) => {
         return { ...state, cart: state.cart.filter((cartItem) => cartItem.id !== action.payload)}
     };
 
+    if (action.type === 'DISPLAY_ITEMS') {
+        return { ...state, cart: action.payload, loading: false}
+    };
+
     
 }
