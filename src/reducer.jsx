@@ -7,6 +7,12 @@ export default (state, action) => {
     };
 
     if (action.type === "CLEAR_CART") {
-        return { ...state, total: 0, amount: 0, loading: false, cart:[] }
-    }
+        return { ...state, cart:[] }
+    };
+
+    if (action.type === 'REMOVE') {
+        return { ...state, cart: state.cart.filter((cartItem) => cartItem.id !== action.payload)}
+    };
+
+    
 }
