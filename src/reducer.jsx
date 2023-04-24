@@ -18,6 +18,14 @@ export default (state, action) => {
         return { ...state, cart: action.payload, loading: false}
     };
 
+    if (action.type === 'INCREASE') {
+        
+    }
+
+    if (action.type === 'DECREASE') {
+        
+    }
+
     if (action.type === 'TOGGLE_AMOUNT') {
         let tempCart = state.cart
     }
