@@ -40,7 +40,7 @@ export const AppProvider = ({ children }) => {
     };
 
     const toggleAmount = (id, type) => {
-        dispatch({ type: "TOOGLE_AMOUNT", payload: { id, type } })
+        dispatch({ type: "TOGGLE_AMOUNT", payload: { id, type } })
     };
 
 
@@ -55,9 +55,9 @@ export const AppProvider = ({ children }) => {
     }, [])
 
 
-    // useEffect(() => {
-    //     dispatch({ type: "GET_TOTALS" })
-    // }, [state.cart]);
+    useEffect(() => {
+        dispatch({ type: "GET_TOTALS" })
+    }, [state.cart]);
 
     return (
         <AppContext.Provider value={{
@@ -67,6 +67,7 @@ export const AppProvider = ({ children }) => {
             increase,
             decrease,
             toggleAmount,
+            fetchData
         }}>
             {children}
         </AppContext.Provider>

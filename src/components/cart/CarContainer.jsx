@@ -3,7 +3,7 @@ import CartItem from "./CartItem"
 
 
 const CarContainer = () => {
-    const { cart, total, clearCart } = useGlobalContext()
+    const { cart, total, clearCart, fetchData } = useGlobalContext()
 
     if (cart.length === 0) {
         return (
@@ -11,6 +11,9 @@ const CarContainer = () => {
                 <header>
                     <h2>your bag</h2>
                     <h4 className='empty-cart'>is currently empty</h4>
+                    <button className="btn reloaded-btn" onClick={() => fetchData()}>
+                        reloaded
+                    </button>
                 </header>
             </section>
         )
@@ -33,7 +36,7 @@ const CarContainer = () => {
                         total <span>${total}</span>
                     </h4>
                 </div>
-                <button className="btn clear-btn">
+                <button className="btn clear-btn" onClick={() => clearCart()}>
                     clear cart
                 </button>
 
