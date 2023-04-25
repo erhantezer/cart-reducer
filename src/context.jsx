@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from './reducer';
-import cartItems from "./helper/data";
+// import cartItems from "./helper/data";
 import axios from "axios";
 
 const AppContext = createContext();
@@ -12,7 +12,7 @@ export const useGlobalContext = () => {
 
 const initialState = {
     loading: false,
-    cart: cartItems,
+    cart: [],
     total: 0,
     amount: 0,
 }
@@ -67,7 +67,7 @@ export const AppProvider = ({ children }) => {
             increase,
             decrease,
             toggleAmount,
-            fetchData
+            fetchData,
         }}>
             {children}
         </AppContext.Provider>
